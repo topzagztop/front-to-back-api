@@ -16,4 +16,6 @@ router.post(
 // Endpoint http://localhost:8080/api/login
 router.post("/login", validateWithZod(loginSchema), authControllers.login);
 
+router.get("/current-user", authControllers.currentUser)
+
 module.exports = router;

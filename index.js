@@ -7,6 +7,7 @@ const notFound = require("./middleware/not-found");
 
 //Import Routes
 const authRoutes = require("./routes/auth-routes");
+const userRoutes = require("./routes/user-route")
 
 const app = express();
 
@@ -16,6 +17,7 @@ app.use(morgan("dev")); // Show log terminal
 
 //Routes
 app.use("/api", authRoutes);
+app.use("/api", userRoutes);
 
 //error
 app.use(errorHandler);
